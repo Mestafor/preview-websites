@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import {PreviewList} from '..';
 
 test('renders learn react link', () => {
-  const {container} = render(<App />);
+  const {container} = render(<PreviewList />);
   expect(container).toBeInstanceOf(HTMLElement);
 });

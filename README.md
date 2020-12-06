@@ -1,3 +1,25 @@
+## Runing
+1. Dev (in 2 different terminals)
+    1. `node index.js`
+    2. `npm start`
+2. Prod
+    1. `npm run build`
+    2. `node index.js`
+
+## Issues
+1. Install `yarn add node-sass@4.14.1`. With latest node-sass will be errors
+2. If used Visual Studio Code don't forget to change typescript's path to workspace environment
+
+
+## Improvements
+1. We can use CSSinJS
+2. Parseing logic can be moved to the backend side.
+
+
+
+---
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

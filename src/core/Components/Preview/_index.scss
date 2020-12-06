@@ -1,0 +1,54 @@
+.preview {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #eee;
+
+    &__content {
+        padding: 15px;
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+
+        animation: scaleIn .3s ease-in-out forwards;
+        transform-origin: top;
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        animation: showIn .3s ease-in-out forwards;
+    }
+
+    &__desc {
+        font-size: 1rem;
+        letter-spacing: .1em;
+        animation: showIn .3s ease-in-out forwards;
+    }
+
+    &__error {
+        color: red;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes showIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
