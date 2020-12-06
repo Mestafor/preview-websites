@@ -6,7 +6,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 var request = require("request");
 
 app.get('/ping', function (req, res) {
- return res.send('pong');
+  return res.send('pong');
 });
 
 app.get('/', function (req, res) {
@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
- 
+
 // parse application/json
 app.use(bodyParser.json())
 
@@ -24,12 +24,14 @@ app.post('/preview', (req, res) => {
   const websiteUrl = req.body.websiteUrl;
 
   request(websiteUrl, function (error, response, body) {
-      if (!error) {
-          res.send(body);
-      } else {
-          res.status(404).send(error);
-      }
+    if (!error) {
+      res.send(body);
+    } else {
+      res.status(404).send(error);
+    }
   });
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8080, () => {
+  console.log(`Open http://localhost:${process.env.PORT || 8080}`);
+});
