@@ -2,7 +2,7 @@
 1. Dev (in 2 different terminals)
     1. add to package.json `"proxy": "http://localhost:8080",`
     2. `node index.js`
-    3. `npm start`
+    3. `npm run dev`
 2. Prod
     1. `npm run build`
     2. `node index.js`
