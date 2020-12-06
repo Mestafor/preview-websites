@@ -1,10 +1,12 @@
 ## Runing
 1. Dev (in 2 different terminals)
-    1. `node index.js`
-    2. `npm start`
+    1. add to package.json `"proxy": "http://localhost:8080",`
+    2. `node index.js`
+    3. `npm start`
 2. Prod
     1. `npm run build`
     2. `node index.js`
+    3. If deployt it to heroku, remove `"proxy": "http://localhost:8080",` from package.json
 
 ## Issues
 1. Install `yarn add node-sass@4.14.1`. With latest node-sass will be errors
